@@ -1,0 +1,328 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cantarell&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cantarell:wght@700&family=Vollkorn:ital,wght@1,900&display=swap');
+
+
+/*GENERALITES*/
+
+/*pour enlever les marges*/
+body {
+    margin: 0;
+   /* padding: 0;*/
+    background-color: #6F1E51;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*HEADER*/
+header{
+    position: relative;
+    max-height: 700px;
+    height: 100vh;
+    width: 100vw;
+    overflow:hidden;
+}
+
+nav {
+    background-color: #000;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px;
+    z-index: 2;
+}
+
+#logo {
+   display: flex;
+    padding-top: 50px;
+    top: 10px;
+    z-index:999;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    height: 80px;
+    line-height:80px;
+    padding: 0px 15px;
+    z-index: 2;
+}
+nav li:hover {
+    background-color: #6F1E51;
+}
+
+nav li:on {
+    background-color: yellowgreen;
+}
+nav li:on a:hover {
+    color: black;
+}
+
+nav a {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: 0.5s;
+}
+
+nav a:hover {
+    color: aliceblue;
+    transition: 0.5s;
+}
+
+#burger {
+    color: whitesmoke;
+    display: none;
+    font-size: 30px;
+    position: absolute;
+    right: 40px;
+}
+#burger span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    margin: 4px;
+    position: relative;
+    transition: 0.5s;
+}
+/*On utilise les pseudos classes pour placer les barres (position verticale)*/
+#burger.active span:nth-child(1){
+   transform: rotate(45deg);
+   top: 8px;
+   background-color: rgba(179, 55, 113,1.0);
+   filter: brightness(1.5);
+}
+#burger.active span:nth-child(2){
+   opacity: 0;
+}
+
+#burger.active span:nth-child(3){
+   transform: rotate(-45deg);
+   top: -8px;
+   background-color: rgba(179, 55, 113,1.0);
+   filter: brightness(1.5);
+}
+
+video{
+/*pour mettre la video en plein écran*/
+    min-width: 100%;
+    min-height:100%;
+    position:absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+   
+}
+
+/*Bouton pour mettre la video en pause*/
+#btn{
+    position: absolute;
+    background-color: black;
+    z-index: 999;
+    bottom: 15px;
+    left:15px;
+    border-radius: 100%;
+    cursor: pointer;/*fait apparaitre une main pour inciter à cliquer*/
+    outline: none;
+}
+
+#btn img{
+    width: 60px;
+    filter: invert(100%);
+    color: black;
+}
+
+/*MAIN*/
+/*container de Savoir faire et de Slider*/
+#container1{
+    max-width: 90vw;
+    margin:auto;
+    background-color: rgba(158, 141, 141, 0.26);
+    box-shadow: 20px 10px 10px #2e2b2d67;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    
+}
+
+main{ 
+    min-height: 100vh;
+    margin-top: 20px;
+    margin-left:20px;
+    
+}
+
+.savoirFaire{
+    color: whitesmoke;
+    background-color: transparent;
+    width: 40%;
+    font-family: 'Cantarell', sans-serif;
+    text-align: justify;
+
+   /* padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 25px;*/
+}
+.satisfaction{
+    text-align: center;
+    font-size : 25px;
+}
+p{
+    font-size : 18px;
+}
+h1{ 
+    color: whitesmoke;
+    font-family: 'Vollkorn', serif;
+    font-size: 60px;
+    initial-letter: 3;
+    /*letter-spacing: 1em;*/
+    font-stretch: expanded;
+    margin-left: 60px;
+}
+h1::first-letter{
+    font-size : 7rem;
+    font-weight: bold;
+}
+
+/*SLIDER*/
+#slider {
+    top: 30px;
+    max-width: 640px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 20px 10px 10px #2e2b2d67;
+}
+
+.image {
+    box-sizing: border-box;
+    width: 100vw;
+}
+
+/* défilement fleches gauche et droite du slider au survol de la souris*/
+#slider:hover #gauche, #slider:hover #droite {
+    color: rgba(255,255,225,0.5);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 25px;
+    padding: 15px;
+    background-color: rgba(0,0,0,0.5);
+    cursor: pointer;
+    transition: 0.5s;
+}
+/*arrondissement background fleche slider droite*/
+#slider:hover #droite {
+    right: 0; /*permet d'afficher les flèches flaticon : pourquoi ?*/
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+/*arrondissement background fleche slider gauche*/
+#slider:hover #gauche {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+/*Assombrissement du background fleche slider droite et gauche au survol de la souris*/
+#slider:hover #gauche:hover, #slider:hover #droite:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/*création des boutons ronds permettant l'accès directe à la photo de notre choix*/
+#controle span {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #aaa;
+    display: inline-block;
+    cursor: pointer;
+    margin: 3px;
+}
+/*positionnement des boutons ronds sur le slider*/
+#controle {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+/*Les boutons ronds devient blanc à chaque clic sur le slider permettant de se repérer*/
+#controle span.active {
+    background-color: #fff;
+}
+
+/*FOOTER*/
+#footer{
+    width: 100vw;
+    background-color: #000;
+    height: 50vh;
+    position :absolute;
+}
+
+/*.container{
+    
+    margin: auto;
+    padding: 0 15px;
+    color: rgba(44, 62, 80,1.0);
+    font-family: 'Montserrat', sans-serif;
+    z-index: 6;*/
+    
+}
+/**********************************************************************************************************
+VERSION TABLETTE
+***********************************************************************************************************/
+@media screen and (min-width: 721px) and (max-width: 900px) {
+    nav {
+        height: 70px;
+           align-items: center;
+            /*padding: 0px 40px;*/
+           position: fixed;
+            width: 100%;
+            top: 0;
+        }
+    nav ul {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color : rgba(179, 55, 113, 0.53);
+        flex-direction:column;
+        align-items: stretch;
+        transition: 0.5s;
+        z-index: 3;
+    }
+    
+    nav li {
+        text-align: center;
+    }
+    nav ul.active {
+        left: 0;
+        bottom: 0;
+    }
+
+    
+    #burger {
+        display: block;
+        cursor: pointer;
+        margin-right: 40px;
+        z-index: 3;
+    }
+   
+      
+    }
+

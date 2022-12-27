@@ -1,0 +1,1551 @@
+/*********************************
+LES FONTS
+*********************************/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fasthand&display=swap');
+
+/******************************************************************************
+GLOBAL
+*********************************************************************************/
+/**************************
+VARIABLES
+**************************/
+/*on intègre  les paramètres dans une variable pour pouvoir les appeler plus tard */
+
+:root {
+  /*hauteur header*/
+  --header-height : 120px;
+
+  /* palette */
+  --blue-color: #041821;
+  --green-color: #1BD79E;
+  --green-color: hsl(162, 78%, 92%); /*hsl pour mettre de la transparence*/
+  --pink-color : rgba(179, 55, 113,1.0);
+  --pink2-color : rgba(163, 50, 103, 0.171);
+  --pink3-color : rgba(184, 73, 125, 0.849);
+  --pink4-color: rgb(124, 11, 64);
+  --white-color : #fff;
+  --grey-color : #808080;
+  --grey2-color : #E5E5E5;
+  --main-white: #dddddd;
+  --shade-white: #d3d3d3;
+  --main-black: #181818;
+  --main-yellow: #e6d28c;
+  --dark-yellow: #f4cb38;
+  /* Fonts */
+  --base-font: Open sans, sans-serif;
+  --title-font: Merriweather, serif;
+  /* Font-size */
+  --text-sm: 1.4rem;
+  --text-base: 1.6rem;
+  --text-md: 1.8rem;
+  --text-lg: 2rem;
+  --text-xl: 2.4rem;
+  --text-2xl: 3rem;
+  --text-3xl: 3.6rem;
+  --text-4xl: 4.2rem;
+  --text-5xl: 5rem;
+  --text-6xl: 6rem;
+  --text-7xl: 7.2rem;
+
+  /* Spacing */
+  --space-1: 0.1rem;
+  --space-2: 0.2rem;
+  --space-4: 0.4rem;
+  --space-6: 0.6rem;
+  --space-8: 0.8rem;
+  --space-10: 1rem;
+  --space-12: 1.2rem;
+  --space-16: 1.6rem;
+  --space-20: 2rem;
+  --space-28: 2.8rem;
+  --space-36: 3.6rem;
+  --space-44: 4.4rem;
+  --space-52: 5.2rem;
+  --space-60: 6rem;
+  --space-72: 7.2rem;
+  --space-84: 8.4rem;
+  --space-96: 9.6rem;
+}
+html {
+  font-size: 62.5%;
+}
+
+body{
+    font-family : 'Montserrat', sans-serif;
+    font-size : 1em; /*1em correspond à 16px*/
+    font-weight: 300; /*correspond au plus light*/
+    background-color: var(--white-color);
+    color : var(--grey-color);
+    overflow-x: hidden; /* pour éviter de dépasser en horizontal on cache en "X"*/
+    /*on change le cursor avec un modèle ciseaux*/
+   /* cursor: url('../assets/icones/scissors-solid.svg'), pointer;*/
+}
+
+*{
+    box-sizing: border-box;
+}
+
+header{
+  position: fixed; 
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%; /* toujours mettre une width quand on a une position fixed pour que cela foncitionne*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction : column;
+  border-bottom : 1px solid #E5E5E5;
+  height: 120px;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter:blur(5px);  
+}
+/**************
+Nom Malea. dans 
+le header
+****************/
+.header-logo{
+    font-size: 24px;
+    color: var(--blue-color);
+    font-family: 'Yeseva One', serif;
+    margin : 0 0 10px 0;
+    cursor: default;
+ }
+
+.header-logo span{
+    color: var(--pink-color);
+}
+
+/**********************
+Barre de navigation
+***********************/
+#menu ul{
+  margin: 0px;
+  padding: 0;
+  list-style-type: none;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
+}
+
+.header-reseaux{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-reseaux a {
+    display: block;
+    margin: 0 5px;
+}
+
+.header-reseaux a:hover{
+    color: var(--pink-color);
+}
+
+/*on agrandi les pictos*/
+.header-reseaux i{
+    font-size: 20px;
+}
+
+/*on décale le picto moon pour le séparer des pictos facebook et instagram*/
+.header-reseaux a.mode{
+    margin: 0 0 0 30px;
+}
+
+a{
+  text-decoration: none;
+  color : var(--blue-color);
+  transition : color 0.3s; /*effet de hover uniquement sur la couleur*/
+}
+
+h1{
+    font-family: 'Yeseva One', serif;
+    color : var(--blue-color);
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 1.3em; /* environ 20px*/
+    margin : 0 0 0.5em 0;
+    padding : 0;
+}
+h1 span.pink{
+
+    color: var(--pink-color);
+    font-weight: bold;
+}
+/*******Container*******/
+.container h1{
+  font-family: 'Yeseva One', serif;
+  color : var(--blue-color);
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 1.3em; /* environ 20px*/
+  margin : 0 0 0.5em 0;
+  padding : 0;
+}
+
+.container h1 span.pink{
+  color: var(--pink-color);
+  font-weight: bold;
+}
+
+.container{
+ padding: 0, 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+p{
+  margin : 0;
+  padding : 0;
+  line-height: 1.5em;
+  font-size: 18px;
+  }
+
+/**************************
+DARK MODE
+**************************/
+body[data-theme="darkmode"] {
+  --blue-color: #fff;
+  --white-color : #041821;
+}
+body[data-theme="darkmode"] header {
+  background: var(--white-color);
+  border-color: rgba(179, 55, 113,1.0);
+}
+body[data-theme="darkmode"] .filtres a.active {
+  background: #fff;
+}
+
+/**************************
+PAGE CONTENT
+**************************/
+
+/*on utilise la fonction calc pour ajouter 20px à la variable height*/
+.page-content{
+    margin: calc(var(--header-height) + 2px) 0 0 0; /*pour le portefolio*/
+}
+
+/*******************************
+H1 titre Accueil et réalisations
+********************************/
+h1 span.pinkA{
+    font-family : 'Montserrat', sans-serif;
+    color: var(--pink-color);
+    font-weight: bold;
+}
+
+/**************************
+FOOTER
+**************************/
+footer{
+  max-height: 900px;
+}
+/*********** 
+Contact footer
+***************/
+.contact {
+  padding: 20px 20px 50px;
+  background: var(--main-yellow);
+ height: auto;
+  
+}
+
+.contact-content {
+  display: flex;
+  justify-content: center;
+  width: auto;
+
+}
+
+.address-block {
+  background: var(--main-black);
+ padding: var(--space-12) var(--space-12);
+  border-radius: 5px;
+  color: var(--main-yellow);
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+ /* min-width: 350px;*/
+}
+.address-block:nth-child(1) {
+  margin-bottom: var(--space-16);
+}
+
+.map{
+object-fit: contain;
+aspect-ratio: 1/1;
+width: 100%;
+height:30%;
+}
+
+.schedule {
+  margin-left: var(--space-44);
+}
+.schedule p {
+  font-size: var(--text-base);
+  display: flex;
+  justify-content: space-between;
+  margin: var(--space-12) 0;
+  padding-bottom: var(--space-6);
+  font-weight: 500;
+}
+.schedule-table p:not(:last-of-type) {
+  border-bottom: 1px solid #111;
+}
+
+.footer1{
+  font-size: var(--text-base);
+  background: var(--main-black);
+  height: 10px;
+  padding-top: 20px;
+  padding-bottom : 50px;
+  text-align: center;
+  color: var(--main-white);
+  align-items:center;
+  border: var(--main-black);
+}
+
+.keepincontact{
+  text-transform: uppercase;
+  color: whitesmoke;
+}
+
+
+.footer2{
+  font-size: var(--text-base);
+  background: var(--main-black);
+  height: 100px;
+  padding-top: 50px;
+  padding : 0;
+  margin: auto;
+  text-align: center;
+  color: var(--main-white);
+  align-items:center;
+  cursor:default;
+  display: flex;
+  flex-direction: row;
+  /*justify-content: space-around;*/
+  justify-content: center;
+  ;
+}
+
+.footer2 a {
+ /* border-radius: 5px;
+  padding-top: 10px;*/
+  font-size:50px;
+
+  
+}
+a.facebook {
+  /*display: block;*/
+  background-color: rgb(5, 10, 230);
+  color: white;
+  padding-top: 10px;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-right: 10px;
+  
+}
+a.insta {
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+  color: white;
+  object-fit: contain;
+  aspect-ratio: 1/1;
+  padding-top: 10px;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-right: 10px;
+}
+a.mail {
+  background: var(--grey-color);
+  color: white;
+  object-fit: contain;
+  aspect-ratio: 1/1;
+ padding-top: 10px;
+  padding-left: 3px;
+  padding-right: 3px;
+
+}
+.fa-envelope:before {
+    object-fit: contain;
+  aspect-ratio: 1/1;
+  font-size: 45px;
+  margin: auto;
+}
+
+
+.footer2 a:hover{
+  color: whitesmoke;
+}
+
+/*on agrandi les pictos*/
+.footer2 i{
+  color: white;
+  width: 60px;
+}
+
+.footer2 a{
+text-decoration: none;
+color: white;
+transition : color 0.3s; /*effet de hover uniquement sur la couleur*/
+
+}
+.header-reseaux{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-reseaux a {
+    display: block;
+    margin: 0 5px;
+}
+
+.header-reseaux a:hover{
+    color: var(--pink-color);
+}
+
+/*on agrandi les pictos*/
+.header-reseaux i{
+  font-size: 20px;
+}
+
+/*on décale le picto moon pour le séparer des pictos facebook et instagram*/
+.header-reseaux a.mode{
+  margin: 0 0 0 30px;
+}
+
+a{
+text-decoration: none;
+color : var(--blue-color);
+transition : color 0.3s; /*effet de hover uniquement sur la couleur*/
+}
+
+/***********************************************************
+PAGE BLOG
+************************************************************/
+video{
+    display: none;
+    }
+    
+    #btn {
+        display: none;
+    }
+ 
+.parA{
+    margin : 0;
+    padding : 0;
+    line-height: 1.5em;
+    font-size: 18px;
+    }
+
+/**************************
+PAGE CONTACT
+**************************/
+.page-content2{
+  margin-top: 80px; 
+}
+.image_jfrouge{
+  position: relative;
+  z-index: 9;
+  top: 70px;
+  right: 0;
+  left: 0;
+  min-height: 450px;
+  width: 100%;
+  background-image: url('../assets/img/jf_rouge.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--pink-color);
+  background-position: center;
+}
+
+p span.pink{
+
+  color: var(--pink-color);
+  font-weight: bold;
+}
+
+.espace{
+  height: 600px;
+  border: 2px solid red;
+}
+
+/*********************
+Formulaire
+*********************/
+ 
+/*******************************************
+ACCUEIL onePage
+*************************************/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--base-font);
+}
+
+/* Global utility classes */
+
+.main-title {
+  font-family : 'Montserrat', sans-serif;
+ 
+  font-weight: bold;
+  font-size: var(--text-5xl);
+  color: var(--white-color);
+  font-weight: 900;
+}
+
+.section-title {
+  font-family: 'Yeseva One', serif;
+  font-size: var(--text-3xl);
+  margin-bottom: var(--space-6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+}
+.section-title img {
+  width: var(--text-5xl);
+  margin-left: var(--space-8);
+}
+.section-subtitle {
+  font-size: var(--text-lg);
+  margin-bottom: 30px;
+  text-align: center;
+}
+.heading-h3 {
+  font-size: var(--text-lg);
+  display: flex;
+  align-items: center;
+}
+.heading-h3 img {
+  width: var(--text-3xl);
+  margin-right: var(--space-6);
+}
+.heading-h4 {
+  font-size: var(--text-lg);
+}
+.heading-h3,
+.heading-h4 {
+  font-family: var(--title-font);
+  text-transform: uppercase;
+}
+/*****************************************************
+MALEABLOG et page formulaire page contact
+******************************************************/
+.containerArticle{
+    padding:20px;
+     max-width:768px;
+     margin:20px;
+}
+form{
+  margin: auto;
+}
+
+/**********************************
+barre de recherche
+**********************************/
+
+/***************
+Barre search + bouton ok
+****************/
+.cherche{
+width: 98%;
+margin-left: 14px;
+}
+
+.search{
+ /* padding:0;*/
+ /*margin-right: 10px;*/
+ /* margin-left: 10px;*/
+  width: 95%;
+  margin:auto;
+}
+
+input[type="submit"] {
+  width: 95%;
+  height: 50px;
+  border-radius: 5px;
+  color: var(--blue-color);
+  background: var(--main-yellow);
+  border: var(--blue-color);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+input[type="text"].quest, input[type="password"].quest{
+  width: 95%;
+  height: 50px;
+  margin-bottom:20px;
+  border-radius: 5px;
+  border: 2px solid var(--grey-color);
+  padding: 5px;
+  font-size: 18px;
+}
+
+textarea.quest{
+  width: 95%;
+  height: 150px;
+ /* margin-bottom:20px;*/
+  border-radius: 5px;
+  border: 2px solid var(--grey-color);
+  padding: 5px;
+  font-size: 18px;
+  margin: 0 0 20px;
+  margin-top: 20px;
+
+} input[type="text"].quest1 {
+  width: 95%;
+  height: 50px;
+  margin-bottom:20px;
+  border-radius: 5px;
+  border: 2px solid var(--grey-color);
+  padding: 5px;
+  font-size: 18px;
+}
+
+/****************************
+titre et articles du blog
+*****************************/
+h1.welcome{
+  margin-top: 20px;
+  padding: 30px;
+}
+.monBlog{
+  font-family: 'Fasthand', cursive;
+  font-size: 48px;
+  color: var(--pink4-color);
+  font-weight: bold;
+}
+.pourquoi{
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.intro h2{
+  padding-bottom: 30px;
+  margin-top: 30px;
+}
+
+.intro p{
+  padding-right: 20px;
+}
+.rang{
+  margin: auto;
+  display: grid;
+  grid-template-row: 1fr 300px;
+  gap: 10px;
+}
+.sujet{
+  padding-bottom: 50px;
+}
+.article{
+  margin:0;
+ /* padding: 10px;*/
+  text-align: justify;
+  
+}
+.imgBlog{
+  object-fit: cover;
+  /*aspect-ratio: 1/1;*/
+ /* max-width: 320px;*/
+ width: 100%;
+  width:fit-content
+  max-height: 300px;
+  margin:0;
+padding:0;
+align-item: center;
+}
+.artTitle{
+  font-size: 20px;
+  font-weight: bold;
+  width: 100%;
+/*max-width: 320px;*/
+margin:0;
+padding:0;
+text-align: justify;
+}
+
+p.artPara{
+  font-size: 18px;
+  width: 100%;
+  /*max-width: 320px;*/
+  text-align: justify;
+  margin:0;
+ padding:0;
+ margin-bottom: 15px;
+}
+p.date{
+  font-size: 14px;
+}
+
+a.lire{
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--pink4-color);
+  background: var(--main-yellow);
+  padding: 10px;
+  border-radius: 5px;
+}
+.lire{
+  margin-top: 10px;
+}
+/***********************************************
+PAGE POSTS
+*************************************************/
+table{
+  margin:auto;
+  margin-bottom: 100px;
+}
+
+td.tab:first-child{
+  min-width: 300px;
+  margin-bottom:20px;
+  border-radius: 5px;
+  border: 2px solid var(--grey-color);
+  padding: 5px;
+  font-size: 24px;
+}
+
+.fa-pencil{
+  font-size: 18px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.fa-trash{
+  font-size: 18px;
+}
+
+
+/***********************************************
+PAGE ARTICLE
+*************************************************/
+.containerColonne {
+  padding: 20px;
+  margin: auto;
+  padding: 10px;
+}
+
+
+.colonne {
+    margin: auto;
+    /* display: grid; */
+    /* grid-template-columns: 1200px; */
+    /* gap: 10px; */
+  }
+
+  img.imgBlogArt{
+    /* max-width: 350px;*/
+     width: 100%;
+   }
+  .articleText{
+  width: 100%;
+  }
+  
+
+   p.artPara{
+     /*max-width: 350px;*/
+     width: 100%;
+   }
+   .containerCommentaire {
+    padding: 10px;
+  }
+  p.comment{
+    font-size: 16px;
+  }
+
+ /**************************
+        RESPONSIVE
+**************************/
+  /**************************
+        Ajustement mobile first
+ ******************************/
+
+        @media (max-width:767px) {
+          /* Seul le filtre défile de gauche à droite, la page quant à elle reste cadrée*/
+      
+    /***********************************
+    Navigation  /Menu Burger / pictos
+    ***********************************/
+    /*les pictos*/
+  .header-reseaux{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    top: 45px;
+    left: 5px;
+}
+
+.header-reseaux a.mode{
+    margin: 0 0 0 5px;
+}
+
+.header-logo{
+    margin-left: 120px;
+    margin-right: 60px;
+}
+
+/*Barre de navigation*/
+#menu{
+    display: none;
+    position: absolute;
+    top: 120px;
+    left: 0;
+    width: 100%;
+    background: var(--pink-color);
+}
+
+#menu ul li a{
+    display: block;
+    padding: 8px 20px;
+}
+/*on différencie les liens du menu*/
+#menu ul li:nth-child(even){
+    background: rgba(0,0,0,0.2);
+}
+/*le focus permet de que le lien est cliqué*/
+#menu ul li a:focus{
+    color: #fff;
+    background: rgba(0,0,0,0.4);
+}
+
+/*on insère le menu burger dans le header*/
+.menu_burger{
+    position: absolute;
+    top: 35px;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.menu_burger i{/*on stylise l'icône*/
+    font-size: 20px;
+    color: var(--pink-color);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
+}
+
+.page-content{
+  margin: calc(var(--header-height) + 20px) 0 0 0;
+}
+.page-content p{
+  width: 100%;
+  text-align: justify;
+}
+.container{
+  max-width: 1024px;
+  margin: auto;
+  padding:20px;
+}
+.container h1 {
+font-size: 32px;
+padding-top: 10px;
+}
+
+/*on apporte une transparence sur le contenu de la page caché sous le menu mis en avant*/
+.overlay{
+  display: none;
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.7);
+}
+
+/****************** 
+Page Contact
+*******************/
+/*section formulaire*/
+.container p{
+  font-size: 20px;
+  /*text-align: justify;*/
+}
+
+.par_formulaire{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-left: auto;
+}
+
+label{
+  font-size: 14px;
+  width: 80px;
+  text-align: left;
+  /*padding-left: 0;*/
+}
+
+
+textarea{
+  width: 90%;
+  display: block;
+  margin-left: auto;
+   /*margin-right: auto;*/
+}
+
+.btn_envoyer{
+  padding: 0 25%;
+    }
+}
+
+ /**********************
+      Version Tablette
+***********************/
+      /********Portrait********/
+      @media screen and (min-width:768px){
+          /*on retourche le container pour ipad version paysage*/
+          .container{
+              max-width: 1024px;
+              margin: auto;
+              padding:0;
+          }
+          .container h1 {
+            font-size: 32px;
+          }
+        
+          .about-content{
+            width: 1100px;
+            margin:10px;
+            margin:auto;
+          }
+
+          .about-text {
+            width: 450px; 
+            justify-content: space-between;
+            margin: 0 0 0 50px;
+        }
+    
+          header{
+            height: 80px;
+              flex-direction: row;
+              justify-content: space-between;
+          }
+      
+          .header-logo{
+           /*margin: 0 0 0px 30px;0px MODIF*/
+          margin-left: 10px;
+          margin-top: 5px;
+      }
+          .header-reseaux{
+          margin: 0 30px 0 0;
+      }
+      #menu{
+        text-align: center;
+        font-size: 15px;
+    }
+
+    #menu ul li{
+        display: inline-block;
+        line-height: 50px;
+    }
+
+    #menu ul li a{
+        display: block;
+        padding: 7px;  
+    }
+
+    #menu ul li a:hover{
+        background: var(--pink-color);
+        color: #fff;
+        transition: 0.3s;
+        -webkit-transition: 0.3s;
+        -moz-transition: 0.3s;
+    }
+      /*on masque le menu burger*/
+  .menu_burger{
+    display: none;
+}
+
+.page-content p{
+  width: 100%;
+  text-align: justify;
+}
+      p{
+          font-size: 24px;
+      }
+      
+      h1{
+          font-size: 48px;
+      }
+      
+      /*les span situés dans le titre h1 se mettent à la ligne*/
+      h1 span {
+          display: inline-block;
+      }
+
+      .pink{
+        display: block; /*MODIF pink a la ligne en deskt+tabl.*/
+    }
+
+    form{
+        /*font-size: 14px;*/
+        width: 70%;
+    }
+    
+
+    legend {
+        font-size: 2em;
+    }
+
+    label{
+        font-size: 24px;
+        margin-right: 30px;
+        width: 250px;
+    }
+
+    textarea{
+        width: 350px;
+        margin-left: 30%;
+    }
+
+    .btn_envoyer {
+        width: 80%;
+        margin: 0 auto;
+        padding: 0 35%;
+    }
+  
+ /********************************************
+MALEA BLOG MIN 768 MAX 1024
+ **********************************************/
+ /*****************************************************
+MALEABLOG
+******************************************************/
+
+.monBlog{
+  font-size: 48px;
+}
+.intro p{
+  max-width : 1000px;
+  margin:auto;
+  padding: 10px;
+  padding-bottom: 30px;
+}
+
+.containerArticle{
+  padding:20px;
+   min-width : 768px;
+   margin:auto;
+   /*padding: 10px;*/
+   display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 15px; 
+}
+
+img.imgBlog{
+  /* max-width: 350px;*/
+   width: 100%;
+ }
+ p.artPara{
+   /*max-width: 350px;*/
+   width: 100%;
+ }
+ h1.artTitle{
+   max-width: 320px;
+ }
+}
+
+
+
+/******************************************
+PAGE POSTS de 1025 à 1199px
+*******************************************/
+
+td.tab:first-child{
+  width: 600px;
+  font-size: 28px;
+}
+
+      
+/*****************************
+      VERSION GRANDE TABLETTE 
+      ET PETIT DESKTOP 
+****************************/
+
+@media screen and (min-width:1025px) and (max-width: 1199px){
+  #menu{
+    font-size: 18px;
+  }
+
+
+/*****************************************************
+MALEABLOG
+******************************************************/
+
+.monBlog{
+  font-size: 68px;
+}
+.intro p{
+  max-width : 1100px;
+  margin:auto;
+  padding:10px;
+  padding-bottom: 30px;
+}
+
+.containerArticle{
+  padding:20px;
+   min-width:1025px;
+   margin:auto;
+   padding:10px;
+   display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 20px; 
+}
+
+/******************************************
+PAGE POSTS de 1025 à 1199px
+*******************************************/
+
+td.tab:first-child{
+  width: 900px;
+  font-size: 28px;
+}
+
+}
+
+/************************************************************************
+VERSION DESKTOP
+***********************************************************************/
+
+  @media screen and (min-width:1200px) {
+/******************************
+Page réalisation accueil et contact
+*****************************/
+
+/**********************
+      On ajuste le container
+***********************/
+    #menu{
+      font-size: 20px;
+    }
+          .container {
+              margin:auto;
+              width: 1185px;
+          }
+          .page-content p{
+              width: 100%;
+          }
+
+          .page-content{
+            margin: calc(var(--header-height) + 20px) 0 0 0;
+        }
+     .container h1{
+        font-size: 48px;
+    }
+
+    
+
+/**********************
+    Page contact 
+    ***********************/
+.image_fleurie {
+    height: 100%;
+}
+
+  #background-video {
+   width: 100vw;
+   height: 100vh;
+   object-fit: cover;
+   position: fixed;
+   left: 0;
+   right: 0;
+   top: 0;
+   bottom: 0;
+   min-width: 1200px;
+   max-width: 2500px;
+   height: auto;
+  object-fit: cover;
+   aspect-ratio: 16/9;
+   position: relative;
+   z-index: 999;
+  }
+
+/*Bouton pour mettre la video en pause*/
+#btn{
+   position: absolute;
+   background-color: transparent;
+   border: none;
+   z-index: 999;
+   bottom: 15px;
+   left:15px;
+   border-radius: 100%;
+   cursor: pointer;/*fait apparaitre une main pour inciter à cliquer*/
+}
+#btn img{
+   width: 60px;
+   filter: invert(100%);
+   color: black;
+   z-index: 999;
+}
+
+.parA{
+   font-size: 25px;
+   }
+
+/**********************
+PAGE MALEABLOG 1200
+*******************************/
+/********************************
+Barre de recherche
+**********************************/
+
+/************************/
+.intro p{
+  max-width:1200px;
+  margin:auto;
+  padding:0;
+  padding-bottom: 30px;
+}
+
+.containerArticle{
+  padding:20px;
+   min-width:1200px;
+   margin:auto;
+   padding:0;
+   display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 20px; 
+}
+
+/****************************
+titre et articles du blog
+*****************************/
+h1.welcome{
+ 
+  margin-top: 20px;
+  padding-left: 120px;
+  padding-right: 150px;
+}
+.monBlog{
+font-size: 68px;
+}
+
+.rang{
+margin: auto;
+}
+.sujet{
+padding-bottom: 50px;
+margin:auto;
+/*width:50%;*/
+}
+
+article{
+margin:0;
+margin:auto;
+/*padding: 10px;*/
+text-align: justify;
+}
+.imgBlog img{
+object-fit: cover;
+/*aspect-ratio: 1/1;*/
+max-width: 475px;
+width: 100%;
+max-height: auto;
+}
+.artTitle{
+font-size: 20px;
+margin-top: 10px;
+}
+p.artPara{
+font-size: 18px;
+width: 100%;
+/*max-width: 320px;*/
+text-align: justify;
+margin:0;
+padding:0;
+margin-bottom: 15px;
+}
+p.date{
+font-size: 14px;
+}
+
+/***************************
+PAGE POSTS 1200
+******************************/
+td.tab:first-child{
+  width: 1000px;
+  font-size: 28px;
+}
+/*****************************
+PAGE ARTICLE 1200
+*******************************/
+
+.articleSujet{
+ /*display: flex;*/
+  /*flex-direction: row;*/
+  padding-bottom: 10px;
+  margin:0;
+  /*margin:auto;*/
+  /*width: 40%;
+  /*width:50%;*/
+  }
+
+.articleImg{
+  /*width: 40%;*/
+  display: flex;
+}
+
+ img.imgBlogArt {
+  max-width: 600px;
+  width: 100%;
+  padding: 30px;
+  margin-left: 100px;
+}
+
+
+.articleText{
+width: 40%;
+padding: 30px;
+  margin-left: 30px;
+/*float: right;*/
+}
+
+.containerCommentaire {
+  padding: 40px;
+  margin-left: 100px;
+  
+}
+}
+
+/* Responsive Media Queries /ACCUEIL */
+
+@media (max-width: 1024px) {
+  
+  /* Global utility classes */
+  .main-title {
+    font-size: var(--text-5xl);
+  }
+  .main-subtitle {
+    font-size: var(--text-2xl);
+  }
+  .section-title {
+    font-size: var(--text-2xl);
+  }
+  .section-title img {
+    width: var(--text-4xl);
+  }
+  .section-subtitle {
+    font-size: var(--text-lg);
+    margin-bottom: 20px;
+  }
+  .heading-h3 {
+    font-size: var(--text-md);
+  }
+  .heading-h3 img {
+    width: var(--text-2xl);
+  }
+  .container {
+    max-width: 700px;
+  }
+  
+  /* Navigation */
+
+  .main-nav a {
+    font-size: var(--text-sm);
+    margin: 0 var(--space-12);
+    padding: var(--space-6);
+  }
+  /* Hero */
+  .hero {
+    padding-top: 145px;
+    min-height: 600px;
+  }
+  
+  /* About */
+  .about {
+    padding: 50px 20px 100px;
+  }
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .about-text {
+    width: 100%;
+    margin-right: 0;
+  }
+ 
+  
+/********************
+  Page Tarifs
+  *********************/
+  .tarif{
+    max-width: 700px;
+    }
+    #accordeon{
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+      #accordeon dt{
+        font-size: 16px;
+      }
+      dd{
+        padding-bottom : 10px;
+      }
+      .row{
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .card {
+      height:350px;
+      max-width: 350px;
+      }
+     
+      .row{
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+}
+
+/*********************
+Mobile Paysage
+***********************/
+@media (max-width: 750px) {
+    /* Global utility classes */
+    .main-title {
+      font-size: var(--text-3xl);
+    }
+    .main-subtitle {
+      font-size: var(--text-xl);
+    }
+    .section-title {
+      font-size: var(--text-xl);
+    }
+    .section-title img {
+      width: var(--text-2xl);
+    }
+    .section-subtitle {
+      font-size: var(--text-base);
+    }
+    .heading-h3 {
+      font-size: var(--text-base);
+    }
+
+    /* Hero */
+    .hero-link {
+      min-width: 11rem;
+      padding: var(--space-8) var(--space-6);
+      font-size: var(--text-sm);
+    }
+    .hero-link img {
+      display: none;
+    }
+   
+    /* About */
+    .about-text p {
+      font-size: var(--text-sm);
+    }
+    
+    /* Temoignage */
+    .text-slideshow-container {
+      max-width: 600px;
+    }
+    .temoignage-text {
+      font-size: var(--text-xl);
+    }
+    /* Contact */
+    .contact-content {
+      flex-direction: column;
+    }
+    .address-block {
+      min-width: auto;
+    }
+    .address-block:nth-child(2) {
+      margin-bottom: var(--space-36);
+    }
+    .address-block,
+    .schedule {
+      max-width: 375px;
+      margin: 0 auto;
+    }
+    .schedule {
+      margin-top: var(--space-36)
+    }
+
+
+}
+
+/**************************
+PETITS MOBILES
+***************************/
+
+@media (max-width: 525px) {
+
+    /* Global utility classes */
+
+    .main-title {
+      font-size: var(--text-xl);
+    }
+    .main-subtitle {
+      font-size: var(--text-lg);
+    }
+    .section-title {
+      font-size: var(--text-lg);
+    }
+    .section-subtitle {
+      font-size: var(--text-sm);
+    }
+    .heading-h3 img {
+      width: var(--text-xl);
+    }
+
+    /* Hero */
+    .hero {
+      padding-top: 125px;
+      min-height: 500px;
+    }
+
+    /* Navigation */
+
+    .main-nav {
+      display: flex;
+    }
+    .main-nav ul {
+      padding: var(--space-52) 0 var(--space-20);
+      display: none;
+      flex-direction: column;
+    }
+    .main-nav ul li {
+      margin: var(--space-6) 0;
+    }
+    .main-nav.active ul {
+      display: flex;
+    }
+    .nav-toggler {
+      display: block;
+      align-self: baseline;
+      margin-left: auto;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    .nav-toggler img {
+      width: var(--text-xl);
+    }
+
+    /* About */
+    .about {
+      padding: 40px 14px 100px;
+    }
+    .about-slideshow {
+      width: 100%;
+    }
+
+
+}
+
+

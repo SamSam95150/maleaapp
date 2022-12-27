@@ -1,0 +1,1199 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Yeseva+One&display=swap');
+
+/**************************
+VARIABLES
+**************************/
+/*on intègre  les paramètres dans une variable pour pouvoir les appeler plus tard */
+:root{
+    --blue-color: #041821;
+    --green-color: #1BD79E;
+    --green-color: hsl(162, 78%, 92%); /*hsl pour mettre de la transparence*/
+    --pink-color : rgba(179, 55, 113,1.0);
+    --pink2-color : rgba(163, 50, 103, 0.171);
+    --white-color : #fff;
+    --grey-color : #808080;
+    --grey2-color : #E5E5E5;
+    --header-height : 120px;
+ 
+}
+
+/**************************
+DARK MODE
+**************************/
+body[data-theme="darkmode"] {
+    --blue-color: #fff;
+    --white-color : #041821;
+}
+body[data-theme="darkmode"] header {
+    background: var(--white-color);
+    border-color: rgba(179, 55, 113,1.0);
+}
+body[data-theme="darkmode"] .filtres a.active {
+    background: #fff;
+}
+
+/**************************
+GLOBAL
+**************************/
+body{
+    font-family : 'Montserrat', sans-serif;
+    font-size : 1em; /*1em correspond à 16px*/
+    font-weight: 300; /*correspond au plus light*/
+    background-color: var(--white-color);
+    color : var(--grey-color);
+    overflow-x: hidden; /* pour éviter de dépasser en horizontal on cache en "X"*/
+}
+
+*{
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color : var(--blue-color);
+    transition : color 0.3s; /*effet de hover uniquement sur la couleur*/
+   
+}
+
+h1{
+    font-family: 'Yeseva One', serif;
+    color : var(--blue-color);
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 1.3em; /* environ 20px*/
+    margin : 0 0 0.5em 0;
+    padding : 0;
+}
+
+
+h1 span.pink{
+
+    color: var(--pink-color);
+    font-weight: bold;
+}
+
+/***************
+H1 titre page Accueil
+*****************/
+h1 span.pinkA{
+    font-family : 'Montserrat', sans-serif;
+    color: var(--pink-color);
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 1.3em; /* environ 20px*/
+    margin : 0 0 0.5em 0;
+    padding : 0;
+}
+
+/*on utilise la fonction calc pour ajouter 20px à la variable height*/
+.page-content{
+    margin: calc(var(--header-height) + 20px) 0 0 0; /*pour le portefolio*/
+} 
+
+
+/******************************************************************************
+PAGE ACCUEIL
+*********************************************************************************/
+
+/**************************
+PAGE CONTENT
+**************************/
+.page-content1{
+margin: 0 0 0 0;
+
+}
+video{
+   
+    display: none;
+    }
+    
+    #btn {
+        display: none;
+    }
+
+.headerMobile{
+    background-image: url(../assets/img/hairv2.png);
+    background-size: cover;
+    background-position: center;
+    max-width: 828px;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+    position: relative;
+    margin : auto;
+   
+    padding : 0;
+    /*top:120px;*/
+    z-index:1;
+}
+
+.h1Accueil{
+    margin-top : 1.5em;
+    
+}
+
+.container{
+
+    padding: 0, 20px;
+    max-width: 100%;
+    margin: 0;
+}
+
+p{
+margin : 0;
+padding : 0;
+line-height: 1.5em;
+}
+
+.parA{
+    margin : 0;
+    padding : 0;
+    line-height: 1.5em;
+    font-size: 18px;
+    }
+.ados img{
+
+        display: block; /*astuce pour enlever l'espace sous l'image non nécessaire*/
+        width: 30%;
+        height: 30%;@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Yeseva+One&display=swap');
+
+
+        /*********************************************************************************
+        STYLE PAGE REALISATIONS
+        *********************************************************************************/
+        
+        /**************************
+        VARIABLES
+        **************************/
+        /*on intègre  les paramètres dans une variable pour pouvoir les appeler plus tard */
+        :root{
+            --blue-color: #041821;
+            --green-color: #1BD79E;
+            --green-color: hsl(162, 78%, 92%); /*hsl pour mettre de la transparence*/
+            --pink-color : rgba(179, 55, 113,1.0);
+            --pink2-color : rgba(163, 50, 103, 0.171);
+            --white-color : #fff;
+            --grey-color : #808080;
+            --grey2-color : #E5E5E5;
+            --header-height : 120px;
+            
+        }
+        
+        /**************************
+        GLOBAL
+        **************************/
+        body{
+            font-family : 'Montserrat', sans-serif;
+            font-size : 1em; /*1em correspond à 16px*/
+            font-weight: 300; /*correspond au plus light*/
+            background-color: var(--white-color);
+            color : var(--grey-color);
+            overflow-x: hidden; /* pour éviter de dépasser en horizontal on cache en "X"*/
+        }
+        
+        *{
+            box-sizing: border-box;
+        }
+        
+        a{
+            text-decoration: none;
+            color : var(--blue-color);
+            transition : color 0.3s; /*effet de hover uniquement sur la couleur*/
+        }
+        
+        
+        h1{
+            font-family: 'Yeseva One', serif;
+            color : var(--blue-color);
+            font-weight: normal;
+            font-size: 32px;
+            line-height: 1.3em; /* environ 20px*/
+            margin : 0 0 0.5em 0;
+            padding : 0;
+        }
+        
+        h1 span.pink{
+        
+            color: var(--pink-color);
+            font-weight: bold;
+        }
+        
+        .container{
+            padding: 0, 20px;
+            max-width: 100%;
+            margin: 0;
+        }
+        
+        p{
+        margin : 0;
+        padding : 0;
+        line-height: 1.5em;
+        
+        }
+        
+        /*********************************************************************************
+        HEADER PAGE REALISATIONS
+        *********************************************************************************/
+        
+        header{
+          position: fixed; 
+          z-index: 10;
+          top: 0;
+          left: 0;
+          width: 100%; /* toujours mettre une width quand on a une position fixed pour que cela foncitionne*/
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction : column;
+          border-bottom : 1px solid #E5E5E5;
+          height: 120px;
+          background: rgba(255,255,255,0.95);
+          backdrop-filter:blur(5px);  
+        }
+        
+        .header-logo{
+            font-size: 24px;
+            color: var(--blue-color);
+            font-family: 'Yeseva One', serif;
+            margin : 0 0 10px 0;
+            cursor: default;
+         }
+        
+        .header-logo span{
+            color: var(--pink-color);
+        }
+        
+        .header-reseaux{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .header-reseaux a {
+            display: block;
+            margin: 0 5px;
+        }
+        
+        .header-reseaux a:hover{
+            color: var(--pink-color);
+        }
+        
+        /*on agrandi les pictos*/
+        .header-reseaux i{
+            font-size: 20px;
+        }
+        
+        /*on décale le picto moon pour le séparer des pictos facebook et instagram*/
+        .header-reseaux a.mode{
+            margin: 0 0 0 30px;
+        }
+        
+        /**************************
+        PAGE CONTENT
+        **************************/
+        
+        /*on utilise la fonction calc pour ajouter 20px à la variable height*/
+        .page-content{
+            margin: calc(var(--header-height) + 20px) 0 0 0;
+        }
+        /**************************
+        PORTFOLIO
+        **************************/
+        .portfolio{
+            margin: 1.5em 0 0 0;
+        }
+        .filtres{
+            display:flex;
+            justify-content: flex-start ; /*seront toujours calés à gauche*/
+            align-items: center;
+            margin: 0 0 15px 0;
+        }
+        
+        .filtres a{
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 400;
+            font-size: 12px;
+            margin: 0 5px;
+            padding: 5px 8px;
+        }
+        
+        .filtres a.active {
+            color:var(--pink-color);
+            background:var(--pink2-color);
+            font-weight: 600;
+        }
+        /* le mot "tous" du filtre (1er enfant de la class filtres) étant légèrement décalé on modifie la marge*/
+        .filtres a:first-child{
+            margin-left: 0;
+        
+        }
+        
+        .grid{
+            display:grid;
+            grid-template-columns: repeat(3, 1fr); /*on divise en 3 colonnes*/
+            grid-gap : 15px; /*on espace avec des goutières*/
+        }
+        
+        .projet{
+        display:block
+        }
+        
+        /*on cible l'image*/
+        .projet img{
+            display: block; /*astuce pour enlever l'espace sous l'image non nécessaire*/
+            width:100%;
+            height: 100%;
+            object-fit: cover; /*pour maintenir son ratio d'affichage tout en remplissant toute la boîte de contenu. La taille réelle est calculée pour couvrir la zone décrite par la hauteur et la largeur de l'élément. Si les ratios de l'objet et de la boîte ne correspondent pas, le contenu remplacé sera rogné.*/
+            border-radius: 5px;
+            aspect-ratio: 1/1; /*Les calculs de tailles impliquant un ratio d'affichage intrinsèque fonctionnent toujours avec les dimensions de la boîte de contenu spécifiées par box-sizing.*/
+        }
+        
+        .projet-nom{
+            display:none; /*pas besoin d'afficher le nom du projet en version mobile*/
+        }
+        .pub{
+            margin:auto;
+            padding-top: 30px;
+            padding-bottom : 30px; ;
+            text-align: center;
+        }
+        
+        
+        
+        /**************************
+        FOOTER
+        **************************/
+        
+        footer{
+            display:grid;
+            grid-template-columns: repeat(4, 1fr); /*on divise en 3 colonnes*/
+            grid-gap : 15px; /*on espace avec des goutières*/
+            justify-content: center;
+            align-items:center;
+            flex-direction: column; /*pour éviter que tous les éléments se mettent côte à côte horizontalement*/
+            text-align:center;
+            height: var(--header-height);
+            cursor:default;
+            background: black;
+        }
+        
+        .pub, .adresse{
+            text-transform:uppercase;
+            letter-spacing: 2px;
+        }
+        .pub{
+            color:var(--pink-color);
+            font-weight: 800;
+        }
+        .adresse{
+            font-size: 12px;
+            font-weight: 400;
+            margin: 0 0 5px 0;
+            color: white;
+        }
+        
+        /**************************
+        DARK MODE
+        **************************/
+        body[data-theme="darkmode"] {
+            --blue-color: #fff;
+            --white-color : #041821;
+        }
+        body[data-theme="darkmode"] header {
+            background: var(--white-color);
+            border-color: rgba(179, 55, 113,1.0);
+        }
+        body[data-theme="darkmode"] .filtres a.active {
+            background: #fff;
+        }
+        
+        /**************************
+        RESPONSIVE
+        **************************/
+        
+        /**********************
+        Ajustement mobile first
+        ***********************/
+        
+        @media (max-width:767px) {
+            /* Seul le filtre défile de gauche à droite, la page quant à elle reste cadrée*/
+            .filtres{
+                overflow-x: scroll;
+            }
+            .filtres::-webkit-scrollbar{
+                display: none; /*astuce pour camoufler le trait horizontal s'affichant en scrollant sur mobile*/
+            }
+        }
+        
+        /**********************
+        Version Tablette
+        ***********************/
+        
+        @media screen and (min-width:768px) and (max-width: 1199px) {
+            /*on retourche le container pour ipad version paysage*/
+            .container{
+                width: 640px;
+                margin: auto;
+            }
+        
+            /*on rajoute deux colonnes de photso*/
+            .grid{
+                grid-template-columns: repeat(5, 1fr);
+            }
+            
+        }
+        
+        @media screen and (min-width:768px) {
+            header{
+                flex-direction: row;
+                justify-content: space-between;
+                
+            }
+        
+            .header-logo{
+            margin:0 0 0px 30 px;
+            margin-left: 10px;
+        }
+            .header-reseaux{
+        
+            margin :0 30px 0 0;
+        }
+        
+        
+        header{
+            height: 80px;
+        }
+        
+        
+        .container {
+            padding:0;
+        }
+        
+        footer{
+            height: 160px;
+        }
+        
+        /*con centre les liens filtres (tous, court, long etc)*/
+        .filtres{
+            justify-content: center;
+        }
+        
+        p{
+            font-size: 20px;
+        }
+        
+        h1{
+            font-size: 48px;
+        }
+        
+        /*les span situés dans le titre h1 se mettent à la ligne*/
+        h1 span {
+            display: block;
+        }
+        
+        }
+        
+        
+        
+        /**********************
+        VERSION DESKTOP
+        ***********************/
+        
+        /**********************
+        On ajuste le container
+        ***********************/
+        
+        @media screen and (min-width:1200px) {
+            .container {
+                margin:auto;
+                width: 1185px;
+            }
+            .page-content p{
+                width: 60%;
+            }
+        
+            /*on distribue les photso sur 4 colonnes*/
+            .grid{
+                grid: auto / repeat(4, 1fr);
+            }
+            .projet{
+                overflow: hidden; /*tout ce qui dépasse sera caché*/
+                position: relative;
+            }
+            /*on change les tailles de certaine photos (rectangle/ carré etc*/
+            .projet:nth-child(4n+1){ /*selectionne la 1ère vignette de chaque ligne : s'incrémente tous les 4+1*/ 
+                grid-column: span 2;
+            }
+            .projet:nth-child(11n+1){ 
+                grid-column: span 2;
+            }
+        
+            /*on modifie la taille des images en ôtan l'aspect "ratio"*/
+            .projet img{
+                aspect-ratio: unset;
+                height: 320px;
+            }
+            .projet:before{
+                content:'';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: var(--pink-color); /*on crée un écran rose sur la photo*/
+                border-radius: 5px;
+                opacity: 0; /*l'image devient rose*/
+                transition: opacity 0.3s ease-in-out; /*l'image devient rose*/
+            }
+            .projet:hover:before{
+                opacity: 0.7; /*on met une opacité à l'image de manière à ce qu'à chaque passage de la souris, celle-ci deviennen rose translucide*/
+            }
+        
+            .projet-nom{
+                display:inline-block; /* pour que la div prenne juste la place du texte à l'intérieur*/
+                position: absolute;
+                z-index: 2; /*pour que le nom du projet ne soit pas caché par l'écran rose*/
+                bottom: -20px; /* on cache le nom du projet*/
+                left: 20px;
+                font-weight: 700;
+                color: #fff;
+                opacity: 0;
+                transition: 0.3s ease-in-out;
+            }
+        
+        
+            /*on cible le projet nom*/
+            .projet:hover > .projet-nom{
+                opacity : 1;
+                bottom: 20px; /*on remonte le nom du projet pour l'afficher lors du passage de la souris*/
+            }
+        
+        
+        }
+        
+        object-fit: contain; /*pour maintenir son ratio d'affichage tout en remplissant toute la boîte de contenu. La taille réelle est calculée pour couvrir la zone décrite par la hauteur et la largeur de l'élément. Si les ratios de l'objet et de la boîte ne correspondent pas, le contenu remplacé sera rogné.*/
+        border-radius: 5px;
+        aspect-ratio: 1/1; /*Les calculs de tailles impliquant un ratio d'affichage intrinsèque fonctionnent toujours avec les dimensions de la boîte de contenu spécifiées par box-sizing.*/
+    
+    
+    }
+    
+
+/*******************************
+SLIDER
+********************************/
+#slider {
+    top: 10px;
+    /*max-width: 640px;*/
+    
+    max-width:400px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+   
+   /* box-shadow: 20px 10px 10px #2e2b2d67;*/
+}
+
+.image {
+    box-sizing: border-box;
+    object-fit: contain;
+    aspect-ratio: 16/9;
+    display: block; /*astuce pour enlever l'espace sous l'image non nécessaire*/
+   width:100%;
+    object-fit: cover;
+}
+.bigoudis{
+    box-sizing: border-box;
+    object-fit: contain;
+    aspect-ratio: 16/9;
+ /*astuce pour enlever l'espace sous l'image non nécessaire*/
+   width:100%;
+   height: 80%;
+    object-fit: cover;
+
+}
+
+/* défilement fleches gauche et droite du slider au survol de la souris*/
+
+#slider:hover #gauche, #slider:hover #droite {
+    color: rgba(255,255,225,0.5);
+    position: absolute;
+    top: 50%;
+   transform: translateY(-100%);
+    font-size: 25px;
+    padding: 15px;
+    background-color: rgba(0,0,0,0.5);
+   cursor: pointer;
+    transition: 1.5s;
+}
+/*arrondissement background fleche slider droite*/
+#slider:hover #droite {
+   right: 0; /*permet d'afficher les flèches flaticon : pourquoi ?*/
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+/*arrondissement background fleche slider gauche*/
+#slider:hover #gauche {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+/*Assombrissement du background fleche slider droite et gauche au survol de la souris*/
+
+#slider:hover #gauche:hover, .slider:hover #droite:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/*création des boutons ronds permettant l'accès directe à la photo de notre choix*/
+#controle span {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #aaa;
+    display: inline-block;
+    cursor: pointer;
+    margin: 3px;
+}
+/*positionnement des boutons ronds sur le slider*/
+#controle {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+/*Les boutons ronds devient blanc à chaque clic sur le slider permettant de se repérer*/
+#controle span.active {
+    background-color: #fff;
+}
+
+.portfolioB{
+    margin: 1.5em 0 0 0;
+}
+
+
+.gridB{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr); /*on divise en 3 colonnes*/
+    grid-gap : 15px; /*on espace avec des goutières*/
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/**************************************************************************
+PAGE REALISATIONS
+*********************************************************************************/
+
+/************
+HEADER
+***********/
+
+header{
+  position: fixed; 
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%; /* toujours mettre une width quand on a une position fixed pour que cela foncitionne*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction : column;
+  border-bottom : 1px solid #E5E5E5;
+  height: 120px;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter:blur(5px);  
+}
+
+.header-logo{
+    font-size: 24px;
+    color: var(--blue-color);
+    font-family: 'Yeseva One', serif;
+    margin : 0 0 10px 0;
+    cursor: default;
+ }
+
+.header-logo span{
+    color: var(--pink-color);
+}
+
+.header-reseaux{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-reseaux a {
+    display: block;
+    margin: 0 5px;
+}
+
+.header-reseaux a:hover{
+    color: var(--pink-color);
+}
+
+/*on agrandi les pictos*/
+.header-reseaux i{
+    font-size: 20px;
+}
+
+/*on décale le picto moon pour le séparer des pictos facebook et instagram*/
+.header-reseaux a.mode{
+    margin: 0 0 0 30px;
+}
+
+/**************************
+PAGE CONTENT
+**************************/
+
+/*on utilise la fonction calc pour ajouter 20px à la variable height*/
+.page-content{
+    margin: calc(var(--header-height) + 20px) 0 0 0; /*pour le portefolio*/
+}
+
+
+/**************************
+PORTFOLIO
+**************************/
+.portfolio{
+    margin: 1.5em 0 0 0;
+}
+.filtres{
+    display:flex;
+    justify-content: flex-start ; /*seront toujours calés à gauche*/
+    align-items: center;
+    margin: 0 0 15px 0;
+}
+
+.filtres a{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-size: 12px;
+    margin: 0 5px;
+    padding: 5px 8px;
+}
+
+.filtres a.active {
+    color:var(--pink-color);
+    background:var(--pink2-color);
+    font-weight: 600;
+}
+/* le mot "tous" du filtre (1er enfant de la class filtres) étant légèrement décalé on modifie la marge*/
+.filtres a:first-child{
+    margin-left: 0;
+
+}
+
+.grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr); /*on divise en 3 colonnes*/
+    grid-gap : 15px; /*on espace avec des goutières*/
+}
+
+.projet{
+display:block
+}
+
+/*on cible l'image*/
+.projet img{
+    display: block; /*astuce pour enlever l'espace sous l'image non nécessaire*/
+    width:100%;
+    height: 100%;
+    object-fit: cover; /*pour maintenir son ratio d'affichage tout en remplissant toute la boîte de contenu. La taille réelle est calculée pour couvrir la zone décrite par la hauteur et la largeur de l'élément. Si les ratios de l'objet et de la boîte ne correspondent pas, le contenu remplacé sera rogné.*/
+    border-radius: 5px;
+    aspect-ratio: 1/1; /*Les calculs de tailles impliquant un ratio d'affichage intrinsèque fonctionnent toujours avec les dimensions de la boîte de contenu spécifiées par box-sizing.*/
+}
+
+.projet-nom{
+    display:none; /*pas besoin d'afficher le nom du projet en version mobile*/
+}
+
+/**************************
+FOOTER
+**************************/
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column; /*pour éviter que tous les éléments se mettent côte à côte horizontalement*/
+    text-align:center;
+    height: var(--header-height);
+    cursor:default;
+}
+
+.pub, .adresse{
+    text-transform:uppercase;
+    letter-spacing: 2px;
+}
+.pub{
+    color:var(--pink-color);
+    font-weight: 800;
+}
+.adresse{
+    font-size: 12px;
+    font-weight: 400;
+    margin: 0 0 5px 0;
+    color:var(--blue-color);
+}
+
+
+/**************************
+RESPONSIVE
+**************************/
+
+/**********************
+Ajustement mobile first
+***********************/
+
+@media (max-width:767px) {
+    /* Seul le filtre défile de gauche à droite, la page quant à elle reste cadrée*/
+    .filtres{
+        overflow-x: scroll;
+    }
+    .filtres::-webkit-scrollbar{
+        display: none; /*astuce pour camoufler le trait horizontal s'affichant en scrollant sur mobile*/
+    }
+}
+
+/**********************
+VERSION TABLETTE
+***********************/
+/************
+Portrait
+************/
+@media screen and (min-width:768px) and (max-width: 1023px) {
+
+
+    .headerMobile{
+        max-width: 1023px;
+    
+    }
+
+    #slider {
+    
+            top: 10px;
+            /*max-width: 640px;*/   
+            min-width:300px;
+            max-width:900px;
+            display: flex;
+            overflow: hidden;
+            position: relative;
+            margin: auto;
+           
+           /* box-shadow: 20px 10px 10px #2e2b2d67;*/
+        
+    }
+
+    .parA{
+        font-size: 20px;
+        }
+
+}
+
+/************
+Paysage
+************/
+
+@media screen and (min-width:1024px) and (max-width: 1199px) {
+    /*on retourche le container pour ipad version paysage*/
+    .container{
+        width: 640px;
+        margin: auto;
+    }
+    /**********************
+    Page Réalisations 
+    ***********************/
+    /*on rajoute deux colonnes de photo*/
+    .grid{
+        grid-template-columns: repeat(5, 1fr);
+    }
+    
+    /**********************
+    Page Accueil 
+    ***********************/
+    
+    .h1Accueil{
+        
+       /*margin : 1.5em;*/
+       /*width: 300px;*/
+       
+    }
+
+    .headerMobile{
+        background-image: url(../assets/img/hairv2.png);
+        background-size: cover;
+        background-position: center;
+        max-width: 1199px;
+        height: auto;
+        object-fit: cover;
+        aspect-ratio: 16/9;
+        position: relative;
+        margin : auto;
+        padding : 0;
+        /*top:120px;*/
+        z-index:1;
+    }
+
+    h1 span.pinkA{
+        font-size: 42px;
+        line-height: 1.3em; /* environ 20px*/
+        margin : 0 0 0.5em 0;
+        padding : 0;
+        color: var(--pink-color);
+        font-weight: bold;
+        
+
+    }
+    .gridA{
+        display:grid;
+        grid-template-columns: repeat(2, 1fr); /*on divise en 2 colonnes*/
+        grid-gap : 15px; /*on espace avec des goutières*/
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+
+    #slider {
+        /*max-width: 640px;*/
+       min-width:540px;
+       /* max-width:500px;*/
+        max-width: 640px;
+       /* margin-left: 10px;*/
+        overflow: hidden;
+        position: relative;
+        
+       /* box-shadow: 20px 10px 10px #2e2b2d67;*/
+    }
+    .parA{
+        font-size: 20px;
+        }
+    
+    }
+
+
+/**********************
+VERSION DESKTOP
+***********************/
+
+/**********************
+On ajuste le container
+***********************/
+
+@media screen and (min-width:1200px) and (max-width:2500px) {
+    .container {
+        margin:auto;
+        width: 1185px;
+    }
+    .page-content p{
+        width: 60%;
+    }
+
+    /**********************
+    Page Accueil 
+    ***********************/
+    
+    .headerMobile {
+
+       background-size: cover;
+       background-position: center;
+       min-width: 1200px;
+       max-width: 2500px;
+       height: auto;
+      object-fit: cover;
+       aspect-ratio: 16/9;
+       position: relative;
+       margin : auto;
+       padding : 0;
+       margin: auto;;
+       /*top:120px;*/
+       z-index:1;
+
+   }
+   
+   #background-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    min-width: 1200px;
+    max-width: 2500px;
+    height: auto;
+   object-fit: cover;
+    aspect-ratio: 16/9;
+    position: relative;
+    z-index: 999;
+   }
+
+/*Bouton pour mettre la video en pause*/
+#btn{
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    z-index: 999;
+    bottom: 15px;
+    left:15px;
+    border-radius: 100%;
+    cursor: pointer;/*fait apparaitre une main pour inciter à cliquer*/
+   
+}
+
+#btn img{
+    width: 60px;
+    filter: invert(100%);
+    color: black;
+    z-index: 999;
+}
+
+/*
+.h1Accueil{
+    margin : 1.5em;
+    width: 300px;
+    
+ }*/
+
+ h1 span.pinkA{
+    font-size: 42px;
+    line-height: 1.3em; /* environ 20px*/
+    margin : 0 0 0.5em 0;
+    padding : 0;
+    color: var(--pink-color);
+    font-weight: bold;
+    
+
+}
+
+
+
+#slider {
+    /*max-width: 640px;*/
+   min-width:540px;
+   /* max-width:500px;*/
+    max-width: 640px;
+   /* margin-left: 10px;*/
+    overflow: hidden;
+    position: relative;
+    
+   /* box-shadow: 20px 10px 10px #2e2b2d67;*/
+}
+
+.parA{
+    font-size: 25px;
+    }
+
+
+
+/******************************
+Page réalisation - Accueil
+*****************************/
+
+/*on change les tailles de certaine photos (rectangle/ carré etc*/
+.projetA:nth-child(4n+1){ /*selectionne la 1ère vignette de chaque ligne : s'incrémente tous les 4+1*/ 
+    grid-column:1;
+}
+.projetA:nth-child(11n+1){ 
+    grid-column: 1;
+}
+
+.ados img{
+
+    display: block; /*astuce pour enlever l'espace sous l'image non nécessaire*/
+    width: 30%;
+    object-fit: contain; /*pour maintenir son ratio d'affichage tout en remplissant toute la boîte de contenu. La taille réelle est calculée pour couvrir la zone décrite par la hauteur et la largeur de l'élément. Si les ratios de l'objet et de la boîte ne correspondent pas, le contenu remplacé sera rogné.*/
+    border-radius: 5px;
+    aspect-ratio: 1/1; /*Les calculs de tailles impliquant un ratio d'affichage intrinsèque fonctionnent toujours avec les dimensions de la boîte de contenu spécifiées par box-sizing.*/
+
+
+}
+
+
+/******************************
+Page réalisation - Portefolio
+*****************************/
+
+
+/*on centre les liens filtres (tous, court, long etc)*/
+.filtres{
+    justify-content: center;
+ }
+ 
+ p{
+    font-size: 20px;
+ }
+ 
+ h1{
+    font-size: 48px;
+ }
+ 
+ /*les span situés dans le titre h1 se mettent à la ligne*/
+ h1 span {
+    display: block;
+ }
+ 
+
+
+    /*on distribue les photo sur 4 colonnes*/
+    .grid{
+        grid: auto / repeat(4, 1fr);
+    }
+    .projet{
+        overflow: hidden; /*tout ce qui dépasse sera caché*/
+        position: relative;
+    }
+    /*on change les tailles de certaine photos (rectangle/ carré etc*/
+    .projet:nth-child(4n+1){ /*selectionne la 1ère vignette de chaque ligne : s'incrémente tous les 4+1*/ 
+        grid-column: span 2;
+    }
+    .projet:nth-child(11n+1){ 
+        grid-column: span 2;
+    }
+
+    /*on modifie la taille des images en ôtan l'aspect "ratio"*/
+    .projet img{
+        aspect-ratio: unset;
+        height: 320px;
+    }
+    .projet:before{
+        content:'';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--pink-color); /*on crée un écran rose sur la photo*/
+        border-radius: 5px;
+        opacity: 0; /*l'image devient rose*/
+        transition: opacity 0.3s ease-in-out; /*l'image devient rose*/
+    }
+    .projet:hover:before{
+        opacity: 0.7; /*on met une opacité à l'image de manière à ce qu'à chaque passage de la souris, celle-ci deviennen rose translucide*/
+    }
+
+    .projet-nom{
+        display:inline-block; /* pour que la div prenne juste la place du texte à l'intérieur*/
+        position: absolute;
+        z-index: 2; /*pour que le nom du projet ne soit pas caché par l'écran rose*/
+        bottom: -20px; /* on cache le nom du projet*/
+        left: 20px;
+        font-weight: 700;
+        color: #fff;
+        opacity: 0;
+        transition: 0.3s ease-in-out;
+    }
+
+    /*on cible le projet nom*/
+    .projet:hover > .projet-nom{
+        opacity : 1;
+        bottom: 20px; /*on remonte le nom du projet pour l'afficher lors du passage de la souris*/
+    }
+    footer{
+        height: 160px;
+     }
+    
+
+}

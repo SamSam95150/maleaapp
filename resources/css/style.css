@@ -1,0 +1,626 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cantarell:wght@700&family=Vollkorn:ital,wght@1,900&display=swap');
+
+
+/*********************************************************************************
+GENERALITES
+******************************************************************************/
+
+/***********************
+pour enlever les marges
+*************************/
+
+body {
+    margin: 0;
+   /* padding: 0;*/
+    background-color: #6F1E51;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+}
+main{
+   max-width: 1500px;
+   width: 1500px;
+    margin: auto;
+    color: whitesmoke;
+
+}
+
+/*********************************************************************************
+HEADER PAGE ACCUEIL
+*********************************************************************************/
+
+.header{
+    position: relative;
+    max-height: 700px;
+    height: 100vh;
+    width: 100%;
+    overflow:hidden;
+}
+
+
+nav {
+    background-color: #000;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px;
+    z-index: 2;
+}
+
+#logo {
+   display: flex;
+    padding-top: 50px;
+    top: 10px;
+    z-index:999;
+}
+
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    height: 80px;
+    line-height:80px;
+    padding: 0px 15px;
+    z-index: 2;
+}
+nav li:hover {
+    background-color: #6F1E51;
+}
+
+nav li:on {
+    background-color: yellowgreen;
+}
+nav li:on a:hover {
+    color: black;
+}
+
+nav a {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: 0.5s;
+}
+
+nav a:hover {
+    color: aliceblue;
+    transition: 0.5s;
+}
+
+#burger {
+    color: whitesmoke;
+    display: none;
+    font-size: 30px;
+    position: absolute;
+    right: 40px;
+}
+#burger span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    margin: 4px;
+    position: relative;
+    transition: 0.5s;
+}
+/*On utilise les pseudos classes pour placer les barres (position verticale)*/
+#burger.active span:nth-child(1){
+   transform: rotate(45deg);
+   top: 8px;
+   background-color: rgba(179, 55, 113,1.0);
+   filter: brightness(1.5);
+}
+#burger.active span:nth-child(2){
+   opacity: 0;
+}
+
+#burger.active span:nth-child(3){
+   transform: rotate(-45deg);
+   top: -8px;
+   background-color: rgba(179, 55, 113,1.0);
+   filter: brightness(1.5);
+}
+
+video{
+/*pour mettre la video en plein écran*/
+    min-width: 100%;
+    min-height:100%;
+    position:absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+   
+}
+
+/*Bouton pour mettre la video en pause*/
+#btn{
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    z-index: 999;
+    bottom: 15px;
+    left:15px;
+    border-radius: 100%;
+    cursor: pointer;/*fait apparaitre une main pour inciter à cliquer*/
+   
+}
+
+#btn img{
+    width: 60px;
+    filter: invert(100%);
+    color: black;
+}
+
+/*************************************************************************************
+MAIN
+*************************************************************************************/
+.main{
+    margin: auto;
+   /* border: 3px solid red;*/
+    padding-left: 2rem;
+    padding-right: 3rem;
+
+}
+
+/**********************************
+contient la div 'savoirFaire'
+***********************************/
+.container1{
+    color: whitesmoke;
+    font-family: 'Montserrat', sans-serif;
+   /* padding-bottom: 30px;*/
+     max-width: 40%;
+    
+    
+   /* z-index: 6;*/
+}
+
+.box{
+    /*border: red 3px solid;*/
+    width: 100%;
+    padding-top: 0;
+    display: flex;
+    justify-content:space-around;
+}
+
+
+
+/***************************
+On structure les div du main
+****************************/
+.savoirFaire, .satisfaction, .slider, .container2, .titreMain{
+
+    text-align: justify;
+}
+
+/*******************************
+Style du titre "Savoir Faire"
+********************************/
+
+.titreMain h1{
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 0;
+
+}
+.titreMain h1::first-letter{
+    font-family: 'Vollkorn', serif;
+    font-size: 5rem;
+}
+
+/*******************************
+Style des paragraphes
+********************************/
+.satisfaction p{
+    text-align: center;
+    font-size :1.5em;
+    font-weight: bold;
+}
+
+/*******************************
+SLIDER
+********************************/
+.slider {
+   box-sizing: border-box;
+    max-width: 540px;
+    max-height: 50%;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+   box-shadow: 20px 10px 10px #2e2b2d67;
+
+    /*float: left;*/
+}
+.image {
+    box-sizing: border-box;
+    /*width: 100vw;*/
+    width: 100%;
+
+
+}
+/* défilement fleches gauche et droite du slider au survol de la souris*/
+.slider:hover #gauche, .slider:hover #droite {
+    color: rgba(255,255,225,0.5);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 25px;
+    padding: 15px;
+    background-color: rgba(0,0,0,0.5);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+/*arrondissement background fleche slider droite*/
+.slider:hover #droite {
+    right: 0; /*permet d'afficher les flèches flaticon : pourquoi ?*/
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+/*arrondissement background fleche slider gauche*/
+.slider:hover #gauche {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+/*Assombrissement du background fleche slider droite et gauche au survol de la souris*/
+
+.slider:hover #gauche:hover, .slider:hover #droite:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/*création des boutons ronds permettant l'accès directe à la photo de notre choix*/
+#controle span {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #aaa;
+    display: inline-block;
+    cursor: pointer;
+    margin: 3px;
+}
+/*positionnement des boutons ronds sur le slider*/
+#controle {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+
+/*Les boutons ronds devient blanc à chaque clic sur le slider permettant de se repérer*/
+#controle span.active {
+    background-color: #fff;
+}
+
+/*****************************************************************************
+ACTUALITES
+*****************************************************************************/
+    .plus {
+        background-color: #161718;
+        color: white;
+        font-weight: bold;
+        display: block;
+        text-align: center;
+        padding: 1rem 2rem;
+        margin: 2rem;
+        width: 150px;
+        height:60px;
+        margin : auto;
+    }
+    
+    .etudiants {
+        /*display: flex;*/
+        /*flex-wrap: wrap;*/
+        justify-content: space-around;
+        padding: 0 2rem;
+        color: whitesmoke;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .ado{
+        box-sizing: border-box;
+        position: relative;
+    }
+    .reduction{
+        width: 40%;
+        margin-right: 25px ; 
+        }
+
+        .prix.reduc p{
+            text-align:center;
+            margin:auto;
+            justify-content: center;
+            max-width: 20px;
+
+            padding-top: 50px;
+        }
+
+.partenaires{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin:auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logoPart{
+    display: flex;
+    justify-content: space-between;
+   
+}
+.cards{
+    padding-top: 30px;
+    padding-left: 15px;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 40px;
+}
+
+/*****************************************************************************
+MAP
+*****************************************************************************/
+
+#map iframe{
+    position:absolute;
+    left: 0;
+    top: 0;
+  
+    width: 100%;
+    box-sizing: border-box; 
+    margin: auto; 
+ 
+}
+#map{
+   
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 56.25%;
+    height:0;
+}
+
+
+/************************************************************************
+FOOTER
+************************************************************************/
+
+.footer{
+    width: 100%;
+    position : fixed;
+    background-color: #000;
+    color: whitesmoke;
+    bottom: 0;
+    left: 0;
+    margin-top: 120px;
+    height: 100px;
+    text-align: center;
+    z-index: 10;
+}
+
+.container3{
+min-width: 901px;
+
+}
+
+/************************************************************************
+VERSION TABLETTE
+************************************************************************/
+
+@media screen and (min-width: 721px) and (max-width: 900px) {
+
+
+    body{
+       /* width: 900px;*/
+       overflow-x: hidden; /* pour éviter de dépasser en horizontal on cache en "X"*/
+    }
+
+
+    .header{
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        margin: 0;
+    }
+    nav{
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        height: 70px;
+    }
+
+    nav ul {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: auto;
+        background-color : rgb(179, 55, 113);
+        flex-direction:column;
+        align-items: stretch;
+        transition: 0.5s;
+        z-index: 3;
+    }
+    
+    nav li {
+        text-align: center;
+    }
+    nav ul.active {
+        left: 0;
+        bottom: 0;
+    }
+
+
+    #burger {
+        display: block;
+        cursor: pointer;
+        margin-right: 60px;
+        z-index: 3;
+    }
+    
+    .main{
+        max-width: 900px;
+        width: 900px;
+        margin: auto;
+        display: flex;
+        flex-flow: wrap;
+    }
+
+    .savoirFaire, .satisfaction, .slider, .container2, .container1, .specialite{
+        text-align: justify;
+       
+    }
+    .box{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .container1{
+        max-width:45%;
+        margin-left: 25px;
+        margin: auto;
+
+    }
+    
+    .slider {
+        top: 50px;
+        box-sizing: border-box;
+        max-height: 75%;
+    
+     }
+
+     .satisfaction{
+
+        margin:auto;
+
+     }
+
+     .footer{
+        width: 100%;
+     }
+
+    }
+
+/************************************************************************
+VERSION MOBILE
+************************************************************************/
+@media screen and (max-width: 720px) {
+
+    body{
+       /* width: 720px;*/
+       display: flex;
+       flex-flow: wrap;
+       overflow-x: hidden; /* pour éviter de dépasser en horizontal on cache en "X"*/
+    }
+   
+    .header{
+        background-image: url(../assets/img/hairv2.png);
+        background-size: cover;
+        background-position: center;
+        
+        width: 100%;
+        margin-top: 50px;
+       
+    }
+    nav{
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+         height: 70px;
+        
+    }
+    nav ul {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: auto;
+        background-color : rgb(179, 55, 113);
+        flex-direction:column;
+        align-items: stretch;
+        transition: 0.5s;
+        z-index: 3;
+    }
+    
+    nav li {
+        text-align: center;
+    }
+    nav ul.active {
+        left: 0;
+        bottom: 0;
+    }
+
+  
+    #btn {
+        display: none;
+    }
+  
+    #burger {
+        display: block;
+        cursor: pointer;
+        margin-right: 60px;
+        z-index: 3;
+    }
+    
+    video{
+
+        display: none;
+    }
+    
+    .main{
+        max-width: 720px;
+        width: 720px;
+    display: flex;
+        flex-flow: wrap;
+    }
+    
+    .titreMain{
+        margin: auto;
+        text-align: center;
+        padding-top: 50px;
+
+    }
+
+    .slider {
+        
+       max-width: 80%;
+        
+     
+     }
+     .container1{
+       
+         max-width: 100%;
+        
+        
+       /* z-index: 6;*/
+    
+
+    .savoirFaire, .satisfaction, .slider, .container2, .container1, .specialite{
+
+       
+        text-align: justify;
+        width: 550px;
+    }
+
+    .image{
+        width: 100%;
+    }
+
+    .footer{
+        width: 100%;
+     }
+    }
